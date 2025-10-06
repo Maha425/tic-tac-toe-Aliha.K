@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe —</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+      <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="title">
+          <div class="logo" aria-hidden>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18M12 3v18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+          </div>
+          <div>
+            <h1>Tic Tac Toe — Aleeha.K</h1>
+            <p class="sub">Think smart • Beat Aleeha.K if you can • Play vs Aleeha (hard/easy)</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="btn" id="undo">Undo</button>
+          <button class="btn" id="hint">Hint</button>
+          <button class="btn primary" id="restart">Restart</button>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="info">
+          <div class="status">Turn: <strong id="turnLabel">Player (X)</strong></div>
+          <div class="score">
+            <div class="item">X: <span id="scoreX">0</span></div>
+            <div class="item">Draws: <span id="scoreD">0</span></div>
+            <div class="item">O: <span id="scoreO">0</span></div>
+          </div>
+
+          <div class="options">
+            <label>Mode</label>
+            <select id="modeSelect">
+              <option value="pvp">Player vs Player</option>
+              <option value="ai_easy">Player vs Aleeha (Easy)</option>
+              <option value="ai_hard">Player vs Aleeha (Hard)</option>
+            </select>
+
+            <label>Speed</label>
+            <input id="speed" type="range" min="60" max="400" value="240">
+          </div>
+
+          <footer>Tip: Press <strong>Hint</strong> for Aleeha suggestion. Use Undo to revert last move.</footer>
+        </div>
+
+        <div class="board" id="board">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <canvas class="confetti" id="confetti"></canvas>
+  <div class="line" id="winLine"></div>
+  <script src="game.js"></script>
+</body>
+</html>
